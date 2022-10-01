@@ -55,13 +55,6 @@ button:hover:not(.rainbow-text) {
   cursor: pointer;
 }
 
-.grid-container {
-  background-color: white;
-  border: 3px white solid;
-  height: 768px;
-  width: 768px;
-}
-
 .eye-container {
   position: absolute;
   top: -96px;
@@ -124,4 +117,33 @@ span {
   text-shadow:  1px 1px black,
                 2px 2px black,
                 3px 3px black;
+}
+
+.grid-container {
+  background-color: white;
+  /* border: 3px white solid; */
+  display: grid;
+  grid-template-rows: 32px;
+  grid-template-columns: 32px;
+  grid-auto-columns: 3;
+  grid-auto-rows: 4;
+  height: 768px;
+  width: 768px;
+}
+
+.one {
+  grid-column: 1/1;
+}
+
+.two {
+  grid-column: 2/2;
+}
+
+.three {
+  grid-column: 3/3;
+}
+
+.four {
+  grid-row: 3/3;
+  grid-column: 3/3;
 }
