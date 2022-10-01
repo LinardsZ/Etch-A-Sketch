@@ -41,7 +41,7 @@ button {
   font-weight: bold;
   padding: 16px 0;
   width: 50%;
-  transition: background-color, color 400ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
 }
 
 button:hover:not(.rainbow-text) {
@@ -118,4 +118,10 @@ button:hover:not(.rainbow-text) {
 
 .letter-m {
   color: plum;
+}
+
+span {
+  text-shadow:  1px 1px black,
+                2px 2px black,
+                3px 3px black;
 }
