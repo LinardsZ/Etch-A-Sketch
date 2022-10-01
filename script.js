@@ -14,6 +14,9 @@ function createGridItems() {
   attachEventListeners();
 }
 
+const clearButton = document.querySelector(".clear-btn");
+clearButton.addEventListener("click", clearGrid);
+
 function attachEventListeners() {
   let gridItems = document.querySelectorAll(".grid-item");
 
@@ -21,5 +24,12 @@ function attachEventListeners() {
     item.addEventListener("click", function() {
       this.style = "background: black;";
     });
+  });
+}
+
+function clearGrid() {
+  let gridItems = document.querySelectorAll(".grid-item");
+  gridItems.forEach(function(item){
+    item.style.background = "white";
   });
 }
