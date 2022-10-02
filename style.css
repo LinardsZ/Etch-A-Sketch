@@ -22,7 +22,6 @@ h1 {
   color: white;
   font-family: Silkscreen, Times New Roman, Arial, sans-serif;
   font-size: 48px;
-  margin-bottom: 96px;
 }
 
 .button-ui {
@@ -131,6 +130,10 @@ span {
   width: 768px;
 }
 
+.grid-item {
+  user-select: none;
+}
+
 .one {
   grid-column: 1/1;
 }
@@ -146,4 +149,45 @@ span {
 .four {
   grid-row: 3/3;
   grid-column: 3/3;
+}
+
+.active {
+  background: white;
+  color: black; 
+}
+
+.wrapper span {
+  color: white;
+  font-family: Silkscreen, Times New Roman, Arial, sans-serif;
+  font-size: larger;
+  padding-right: 4px;
+  text-shadow: none;
+}
+
+input[type=color] {
+  border: none;
+  background: none;
+  height: 220px;
+  width: 220px;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+}
+
+input[type=color]:hover {
+  cursor:pointer;
+}
+
+.color-wrapper {
+  overflow: hidden;
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: transform 300ms;
+}
+
+.color-wrapper:hover {
+  transform: scale(1.1);
 }

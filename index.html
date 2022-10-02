@@ -19,14 +19,21 @@
       </div>
       <h1>Etch a Sketch!</h1>
       <div class="button-ui">
-        <button>Eraser</button>
+        <div class="color-wrapper">
+          <input id="color-picker" type="color" value="#000000">
+        </div>
+        <button class="draw-btn toggleable">Draw</button>
+        <button class="erase-btn toggleable">Eraser</button>
         <button class="clear-btn">Clear</button>
-        <button>Color Picker</button>
-        <button class="rainbow-text rainbow-mode">
+        <button class="rainbow-text rainbow-btn toggleable">
           <span class="letter-r">R</span><span class="letter-a">a</span><span class="letter-i">i</span><span class="letter-n">n</span><span class="letter-b">b</span><span class="letter-o">o</span><span class="letter-w">w</span>
 
           <span class="letter-m">m</span><span class="letter-o">o</span><span class="letter-d">d</span><span class="letter-e">e</span>
         </button>
+        <div class="wrapper">
+          <span id="slider-text">16x16</span>
+          <input id="slider" type="range" min="1" max="64" value="16">
+        </div>
       </div>
     </div>
     <div class="right-modal">
