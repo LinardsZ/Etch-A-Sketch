@@ -62,20 +62,19 @@ button:hover:not(.rainbow-text) {
 }
 
 .left-eye {
-  height: 24px;
-  left: 60px;
+  height: 48px;
+  left: 35px;
   position: absolute;
-  top: 96px;
-  width: 24px;
+  top: 64px;
+  width: 48px;
 }
 
 .right-eye {
-  height: 24px;
-  left: 180px;
+  height: 48px;
+  left: 155px;
   position: absolute;
-  top: 96px;
-  width: 24px;
-  transform: rotate(45deg);
+  top: 64px;
+  width: 48px;
 }
 
 .letter-r {

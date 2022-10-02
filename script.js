@@ -12,6 +12,31 @@ window.addEventListener('load', function() {
   setupSlider();
 });
 
+document.addEventListener("mousemove", (e) => {
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+
+  const eyes = document.querySelector(".eyes");
+  const rect = eyes.getBoundingClientRect();
+  const eyesX = rect.left + rect.width / 2;
+  const eyesY = rect.top + rect.height / 2;
+
+  const angle = calcAngle(mouseX, mouseY, eyesX, eyesY);
+
+  const leftEye = document.querySelector(".left-eye");
+  const rightEye = document.querySelector(".right-eye");
+  leftEye.style.transform = `rotate(${angle+135}deg)`;
+  rightEye.style.transform = `rotate(${angle+135}deg)`;
+});
+
+function calcAngle(cx, cy, ex, ey) {
+  const dx = ex - cx;
+  const dy = ey - cy;
+  const rad = Math.atan2(dy, dx);
+  const deg = rad * 180 / Math.PI;
+  return deg;
+}
+
 function isMouseDown() {
   window.addEventListener("mousedown", () => mouseDown = true);
   window.addEventListener("mouseup", () => mouseDown = false);
@@ -90,4 +115,3 @@ function setGridItemColor(event) {
     }
     this.style.background = drawColor;
 }
-
